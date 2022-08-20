@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdapterPattern\AdapterPattern.csproj" />
+    <ProjectReference Include="..\DecoratorPattern\DecoratorPattern.csproj" />
     <ProjectReference Include="..\Observer\Observer.csproj" />
     <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj" />
   </ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using AdapterPattern;
+using DecoratorPattern;
 using Observer;
 using OOP.CameraApp;
 using System;
@@ -34,10 +35,23 @@ namespace OOP
 
 
             ///ADAPTER
-            SuperDrone superDrone = new SuperDrone();
-            DroneAdapter droneAdapter  = new DroneAdapter(superDrone);
-            Duck duck = new Duck(droneAdapter);
-            duck.Fly();
+            ///
+            //SuperDrone superDrone = new SuperDrone();
+            //DroneAdapter droneAdapter  = new DroneAdapter(superDrone);
+            //Duck duck = new Duck(droneAdapter);
+            //duck.Fly();
+
+
+            //DECORATOR
+
+            IPizza pizza1 = new ThinCrustPizza();
+            pizza1 = new Olive(pizza1);
+            pizza1 = new Pepper(pizza1);
+            Console.WriteLine(pizza1.getDescription() + " " + pizza1.cost());
+
+            IPizza pizza2 = new ThickCrustPizza();
+            pizza2 = new Pepper(pizza2);
+            Console.WriteLine(pizza2.getDescription() + " " + pizza2.cost());
         }
     }
 }
