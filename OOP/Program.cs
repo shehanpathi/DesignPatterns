@@ -1,5 +1,6 @@
 ﻿using AdapterPattern;
 using DecoratorPattern;
+using FactoryPattern;
 using Observer;
 using OOP.CameraApp;
 using System;
@@ -44,14 +45,21 @@ namespace OOP
 
             //DECORATOR
 
-            IPizza pizza1 = new ThinCrustPizza();
-            pizza1 = new Olive(pizza1);
-            pizza1 = new Pepper(pizza1);
-            Console.WriteLine(pizza1.getDescription() + " " + pizza1.cost());
+            //IPizza pizza1 = new ThinCrustPizza();
+            //pizza1 = new Olive(pizza1);
+            //pizza1 = new Pepper(pizza1);
+            //Console.WriteLine(pizza1.getDescription() + " " + pizza1.cost());
 
-            IPizza pizza2 = new ThickCrustPizza();
-            pizza2 = new Pepper(pizza2);
-            Console.WriteLine(pizza2.getDescription() + " " + pizza2.cost());
+            //IPizza pizza2 = new ThickCrustPizza();
+            //pizza2 = new Pepper(pizza2);
+            //Console.WriteLine(pizza2.getDescription() + " " + pizza2.cost());
+
+            
+            //FACTORY
+            ZoneFactory zoneFactory = new ZoneFactory();
+            IZone zone = zoneFactory.createZone(0);
+            zone.getName();
+
         }
     }
 }
